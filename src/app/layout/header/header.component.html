@@ -1,0 +1,12 @@
+<header>
+  <mat-toolbar color="primary">
+    <!-- Imagem de Logo com link para a página inicial -->
+    <a [routerLink]="['/']">
+      <img src="assets/logo.png" alt="Logo" class="logo">
+    </a>
+    <span>Receitas Online</span>
+    <span class="spacer"></span>
+    <button mat-button [routerLink]="['/login']">Login</button>
+    <button mat-button [routerLink]="['/signup']">Cadastro</button>
+  </mat-toolbar>
+</header>

@@ -1,0 +1,15 @@
+<div class="recipe-details">
+  <h1 class="recipe-title">{{ recipe.title }}</h1>
+  <p class="recipe-description">{{ recipe.description }}</p>
+  <!--<p class="recipe-date">{{ recipe.date | date }}</p>-->
+  <p class="recipe-category">Category: {{ recipe.category }}</p>
+  <h2>Comments:</h2>
+  <div *ngFor="let comment of recipe.comments">
+    <p>{{ comment.text }} - {{ comment.author }}</p>
+  </div>
+  <h2>Ratings:</h2>
+  <p>Average Rating: {{ recipe.averageRating }}</p>
+  <div *ngFor="let rating of recipe.ratings">
+    <p>Rating: {{ rating }}</p>
+  </div>
+</div>

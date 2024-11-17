@@ -1,0 +1,76 @@
+/* recipe-list.component.scss */
+.recipe-list-container {
+  padding: 20px;
+
+  .header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .search-container {
+      width: 300px;
+    }
+  }
+
+  table {
+    width: 100%;
+    margin-bottom: 20px;
+
+    .mat-column-title {
+      width: 30%;
+      text-align: center;
+    }
+
+    .mat-column-category {
+      width: 15%;
+      text-align: center;
+    }
+
+    .mat-column-date {
+      width: 15%;
+      text-align: center;
+    }
+
+    .mat-column-rating {
+      width: 20%;
+      text-align: center;
+    }
+
+    .mat-column-actions {
+      width: 20%;
+      text-align: center;
+    }
+  }
+
+  .title-cell {
+    display: flex;
+    flex-direction: column;
+
+    .recipe-title {
+      font-weight: 500;
+    }
+
+    .recipe-description {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.54);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 300px;
+    }
+  }
+
+  .rating {
+    color: #ffd700;
+    font-size: 16px;
+  }
+
+  .rating-count {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+    margin-left: 4px;
+  }
+}
+
+

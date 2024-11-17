@@ -1,0 +1,50 @@
+<div class="container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Cadastro de Receita</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+
+        <!-- Campo para o título da receita -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Título da Receita</mat-label>
+          <input matInput placeholder="Digite o título da receita" formControlName="title">
+          <mat-error *ngIf="recipeForm.get('title')?.errors?.['required']">
+            Título é obrigatório
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Seletor de categoria -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Categoria</mat-label>
+          <mat-select formControlName="category">
+            <mat-option *ngFor="let category of categories" [value]="category">
+              {{ category.name }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="recipeForm.get('category')?.errors?.['required']">
+            Categoria é obrigatória
+          </mat-error>
+        </mat-form-field>
+
+
+        <!-- Campo para a descrição da receita -->
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Descrição da Receita</mat-label>
+          <textarea matInput placeholder="Descreva a receita" formControlName="description"></textarea>
+          <mat-error *ngIf="recipeForm.get('description')?.errors?.['required']">
+            Descrição é obrigatória
+          </mat-error>
+        </mat-form-field>
+
+        <!-- Botão de cadastro -->
+        <button mat-raised-button color="primary" type="submit"
+                [disabled]="recipeForm.invalid" class="full-width">
+          Cadastrar Receita
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
