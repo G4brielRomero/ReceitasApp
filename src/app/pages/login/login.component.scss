@@ -1,22 +1,131 @@
-.container {
+/* Definindo a estrutura da tela dividida em duas colunas */
+.login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
-  min-height: calc(100vh - 64px);
+  height: 100vh;
+  background-color: #ffffff; /* Fundo branco */
 }
 
+/* Formulário de Login - Lado esquerdo */
+.login-form {
+  flex: 1;
+  background-color: #f2a900; /* Fundo laranja */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100%; /* Garante que ocupe toda a altura */
+}
+
+.recipe-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Fundo branco */
+  padding: 0px;
+}
+
+.recipe-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo do mat-card para o formulário de login */
 mat-card {
-  max-width: 400px;
   width: 100%;
-  padding: 2rem;
+  max-width: 400px;
+  background-color: #f2a900; /* Fundo laranja */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  color: white; /* Cor do texto dentro do card */
 }
 
-.full-width {
-  width: 100%;
-  margin-bottom: 1rem;
+/* Estilo do título */
+mat-card-header {
+  text-align: center;
 }
 
 mat-card-title {
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white; /* Cor do título dentro do card */
+}
+
+/* Estilo dos campos de entrada */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-form-field .mat-form-field-infix {
+  font-size: 16px;
+}
+
+mat-label {
+  font-weight: bold;
+  color: white; /* Cor das labels dentro do card */
+}
+
+input {
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #fff; /* Borda branca para os inputs */
+  background-color: #fff; /* Fundo branco dentro dos inputs */
+}
+
+mat-icon {
+  font-size: 20px;
+}
+
+/* Estilo do botão */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #ffcc00; /* Cor do botão */
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e68900;
+}
+
+button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+/* Estilo para os erros do formulário */
+mat-error {
+  color: #ff4444; /* Cor dos erros em vermelho */
+  font-size: 14px;
+}
+
+/* Estilo para o campo de senha */
+mat-form-field input[type="password"] {
+  padding-right: 40px;
+}
+
+/* Texto para o link de recuperação de senha */
+.forgot-password {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.forgot-password a {
+  color: #ffcc00;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
 }
